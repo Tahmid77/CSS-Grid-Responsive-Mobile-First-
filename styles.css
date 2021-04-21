@@ -89,6 +89,8 @@ h4{
     margin-left: 20px;
     border-bottom: solid 1px var(--primary);
     padding-bottom:20px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 #welcome{
@@ -101,7 +103,7 @@ h4{
     grid-column: 6/9;
 }
 .welcome-img img{
-    width: 200%;
+    width: 130%;
 }
 .welcome-text a{
     margin: 20px;
@@ -112,7 +114,9 @@ h4{
     background: url(assets/square_bg.png);
     background-size: cover;
     background-position: bottom;
+    margin-left: 30px;
 }
+
 #portfolio h2{
     text-align: center;
 }
@@ -129,6 +133,7 @@ h4{
 
 #skills{
     padding: 20px;
+    margin-left: 40px;
 }
 #skills h3{
     text-align: center;
@@ -149,6 +154,9 @@ h4{
     text-align: center;
     max-width: 400px;
     margin: 10px auto;
+    box-sizing: border-box;
+    position: relative;
+    left: 20px;
 }
 #contact h3,p{
     margin-bottom: 0;
@@ -165,6 +173,7 @@ footer{
     background-size: 40%;
     background-repeat: no-repeat;
     background-position: top center;
+    width: 100vw;
 }
 footer p{
    grid-column: 1/4; 
