@@ -1,0 +1,282 @@
+/* variables */
+
+:root{
+    --primary: #FFC636;
+    --secondary: #0A0B5B;
+}
+
+/* resets */
+
+body,p,a,ul,li{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+
+/* base styles  */
+
+body{
+    background: var(--secondary);
+    overflow-x: hidden;
+    font-family: Oxygen;
+}
+.button{
+    background: none;
+    border:2px solid var(--primary);
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 3px rgba(0 ,0 ,0 ,0.6);
+    display: inline-block;
+}
+.button:hover{
+    color: #222;
+    background: var(--primary);
+}
+input,textarea{
+    background: rgba(255, 255, 255, 0.06);
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: 2px solid #9893DB;
+    color: #F2F2F2;
+}
+textarea{
+    resize: none;
+}
+
+/* fonts  */
+
+@font-face {
+    font-family: Oxygen;
+    src: url(assets/Oxygen-Regular.ttf);
+}
+
+h1,h2,h3,h4{
+    color: #DDDFBB;
+    font-weight: normal;
+}
+p,a,li{
+    color: #9893D8;
+}
+h1,h3{
+    font-size: 1.2em;
+}
+h2{
+    font-size: 1.6em;
+}
+h4{
+    font-size: 1.1em;
+}
+.leading{
+    font-size: 1.1em;
+}
+/* mobile styles  */
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    gap: 10px;
+}
+.site-nav ul{
+    display: none;
+}
+.site-nav h1{
+    grid-column: 1/6;
+    margin-left: 20px;
+    border-bottom: solid 1px var(--primary);
+    padding-bottom:20px;
+}
+
+#welcome{
+    padding: 0px 20px 20px 20px;
+}
+.welcome-text{
+    grid-column: 1/6;
+}
+.welcome-img{
+    grid-column: 6/9;
+}
+.welcome-img img{
+    width: 200%;
+}
+.welcome-text a{
+    margin: 20px;
+}
+
+#portfolio{
+    padding: 20px;
+    background: url(assets/square_bg.png);
+    background-size: cover;
+    background-position: bottom;
+}
+#portfolio h2{
+    text-align: center;
+}
+.projects a{
+    grid-column: 1/9;
+}
+.projects a{
+    display: flex;
+}
+.projects a *{
+    max-width: 40%;
+    padding: 20px;
+}
+
+#skills{
+    padding: 20px;
+}
+#skills h3{
+    text-align: center;
+}
+#skills ul li{
+    grid-column: span 4;
+    padding: 10px;
+    text-align: center;
+    background:#070B3E;
+}
+#skills img{
+    height: 120px;
+    padding: 30px;
+}
+#contact{
+    padding: 20px;
+    background:#070B3E;
+    text-align: center;
+    max-width: 400px;
+    margin: 10px auto;
+}
+#contact h3,p{
+    margin-bottom: 0;
+}
+#contact input,#contact textarea{
+    margin: 10px auto;
+    width: 90%;
+}
+footer{
+    margin: 0px;
+    padding: 20px;
+    background:#14153d;
+    background-image: url(assets/footer_image.png);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+footer p{
+   grid-column: 1/4; 
+   text-align: center;
+}
+footer ul{
+    grid-column: 7/9;
+    display: flex;
+}
+footer ul li a{
+    padding: 10px;
+}
+/* small tablet styles  */
+
+@media screen and (min-width: 620px){
+    .welcome-text{
+        grid-column: 1/5;
+    }
+    .welcome-img{
+        grid-column: 5/9;
+    }
+    .welcome-img img{
+        width: 100%;
+    }
+    .projects a{
+        grid-column: span 4;
+        display: block;
+    }
+    .projects a *{
+        max-width: 60%;
+        margin: 10px 20%;
+    }
+    .projects a:last-child{
+        grid-column: 3/7;
+    }
+    footer p{
+        grid-column: 1/4; 
+        text-align: center;
+     }
+     footer ul{
+         grid-column: 8/9;
+     }
+}
+
+/* large tablets and laptops styles  */
+
+@media screen and (min-width: 960px){
+    body{
+        font-size: 18px;
+    }
+
+    .grid{
+        width: 90%;
+        max-width: 1060px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        gap:20px;
+    }
+    .leading{
+        margin: 20px 0px;
+    }
+    .site-nav h1{
+        grid-column: 1/4;
+    }
+    .site-nav ul{
+        display: flex;
+        grid-column: 7/9;
+        align-items: center;
+        justify-content: center;
+    }
+    .site-nav ul{
+        padding: 15px;
+    }
+    .site-nav ul li{
+        margin: 15px;
+    }
+    .welcome-text{
+        align-self: center;
+    }
+    .projects a:nth-child(1){
+        grid-column: 1/3;
+    }
+    .projects a:nth-child(2){
+        grid-column: 4/6;
+        padding-top: 100px;
+    }
+    .projects a:nth-child(3){
+        grid-column:7/9;
+    }
+    .projects a *{
+        max-width: 90%;
+    }
+    #skills ul li{
+        grid-column: span 2;
+    }
+}
+
+/* desktops styles  */
+
+@media screen and (min-width: 1200px){
+    body{
+        font-size: 20px;
+    }
+    .site-nav ul{
+        
+        position: relative;
+        left: 60px;
+    }
+
+    footer{
+        margin: 0px;
+        padding: 10px;
+        background-size: 10%;
+    }
+}
